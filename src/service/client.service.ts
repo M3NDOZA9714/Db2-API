@@ -3,7 +3,7 @@ import path from 'path'
 import { poolPromise, mssql } from '../database/index'
 
 // Read the JSON file
-const filePath = path.resolve(__dirname, '../model/catalog.model.json');
+const filePath = path.resolve(__dirname, '../model/client.model.json');
 const data = fs.readFileSync(filePath, 'utf8');
 const json = JSON.parse(data);
 

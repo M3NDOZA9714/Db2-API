@@ -1,0 +1,117 @@
+[
+    {
+        "getPaquete": {
+            "params": [],
+            "query": "select * from dbo.getPaquete()",
+            "type": "query"
+        }
+    },
+    {
+        "getServicioPaquete": {
+            "params": [
+                {
+                    "Param": "idPaquete",
+                    "Type": "Int"
+                }
+            ],
+            "query": "select * from dbo.getPaqueteServicio(@idPaquete)",
+            "type": "query"
+        }
+    },
+    {
+        "insertPaquete": {
+            "params": [
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "descripcion",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "servicio",
+                    "Type": "Table",
+                    "Cols": [
+                        {
+                            "Name": "Id",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "IdPaquete",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "NombrePaquete",
+                            "type": "VarChar"
+                        },
+                        {
+                            "Name": "IdServicio",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "NombreServicio",
+                            "type": "VarChar"
+                        },
+                        {
+                            "Name": "DescripcionServicio",
+                            "type": "VarChar"
+                        }
+                    ]
+                }
+            ],
+            "query": "dbo.insertPaquete",
+            "type": "execute"
+        }
+    },
+    {
+        "updatePaquete": {
+            "params": [
+                {
+                    "Param": "id",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "descripcion",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "servicio",
+                    "Type": "Table",
+                    "Cols": [
+                        {
+                            "Name": "Id",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "IdPaquete",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "NombrePaquete",
+                            "type": "VarChar"
+                        },
+                        {
+                            "Name": "IdServicio",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "NombreServicio",
+                            "type": "VarChar"
+                        },
+                        {
+                            "Name": "DescripcionServicio",
+                            "type": "VarChar"
+                        }
+                    ]
+                }
+            ],
+            "query": "dbo.updatePaquete",
+            "type": "execute"
+        }
+    }
+]

@@ -29,5 +29,33 @@
             "query": "dbo.insertCliente",
             "type": "execute"
         }
+    },
+    {
+        "updateCliente": {
+            "params": [
+                {
+                    "Param": "id",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "direccion",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "telefono",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "rtn",
+                    "Type": "VarChar"
+                }
+            ],
+            "query": "dbo.updateCliente",
+            "type": "execute"
+        }
     }
 ]

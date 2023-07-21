@@ -1,0 +1,45 @@
+[
+    {
+        "getServicio": {
+            "params": [],
+            "query": "select * from dbo.getServicio()",
+            "type": "query"
+        }
+    },
+    {
+        "insertServicio": {
+            "params": [
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "descripcion",
+                    "Type": "VarChar"
+                }
+            ],
+            "query": "dbo.insertServicio",
+            "type": "execute"
+        }
+    },
+    {
+        "updateServicio": {
+            "params": [
+                {
+                    "Param": "id",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "descripcion",
+                    "Type": "VarChar"
+                }
+            ],
+            "query": "dbo.updateServicio",
+            "type": "execute"
+        }
+    }
+]
