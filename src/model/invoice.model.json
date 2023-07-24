@@ -1,0 +1,89 @@
+[
+    {
+        "getFactura": {
+            "params": [],
+            "query": "select * from dbo.getFactura()",
+            "type": "query"
+        }
+    },
+    {
+        "insertFactura": {
+            "params": [
+                {
+                    "Param": "idCliente",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "tipo",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "detalleFactura",
+                    "Type": "Table",
+                    "Cols": [
+                        {
+                            "Name": "Id",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "Cantidad",
+                            "type": "Float"
+                        },
+                        {
+                            "Name": "Precio",
+                            "type": "Float"
+                        },
+                        {
+                            "Name": "Impuesto",
+                            "type": "Float"
+                        }
+                    ]
+                }
+            ],
+            "query": "dbo.insertFactura",
+            "type": "execute"
+        }
+    },
+    {
+        "updateFactura": {
+            "params": [
+                {
+                    "Param": "id",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "idCliente",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "tipo",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "detalleFactura",
+                    "Type": "Table",
+                    "Cols": [
+                        {
+                            "Name": "Id",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "Cantidad",
+                            "type": "Float"
+                        },
+                        {
+                            "Name": "Precio",
+                            "type": "Float"
+                        },
+                        {
+                            "Name": "Impuesto",
+                            "type": "Float"
+                        }
+                    ]
+                }
+            ],
+            "query": "dbo.updateFactura",
+            "type": "execute"
+        }
+    }
+]

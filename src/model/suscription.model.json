@@ -1,0 +1,69 @@
+[
+    {
+        "getSuscripcion": {
+            "params": [],
+            "query": "select * from dbo.getSuscripcion()",
+            "type": "query"
+        }
+    },
+    {
+        "insertSuscripcion": {
+            "params": [
+                {
+                    "Param": "idPaquete",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "idCliente",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "idTecnico",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "horas",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "precio",
+                    "Type": "Float"
+                }
+            ],
+            "query": "dbo.insertSuscripcion",
+            "type": "execute"
+        }
+    },
+    {
+        "updateSuscripcion": {
+            "params": [
+                {
+                    "Param": "id",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "idPaquete",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "idCliente",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "idTecnico",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "horas",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "precio",
+                    "Type": "Float"
+                }
+            ],
+            "query": "dbo.updateSuscripcion",
+            "type": "execute"
+        }
+    }
+]

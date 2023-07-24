@@ -1,0 +1,69 @@
+[
+    {
+        "getTecnico": {
+            "params": [],
+            "query": "select * from dbo.getTecnico()",
+            "type": "query"
+        }
+    },
+    {
+        "insertTecnico": {
+            "params": [
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "identidad",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "correo",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "telefono",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "direccion",
+                    "Type": "VarChar"
+                }
+            ],
+            "query": "dbo.insertTecnico",
+            "type": "execute"
+        }
+    },
+    {
+        "updateTecnico": {
+            "params": [
+                {
+                    "Param": "id",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "identidad",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "correo",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "telefono",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "direccion",
+                    "Type": "VarChar"
+                }
+            ],
+            "query": "dbo.updateTecnico",
+            "type": "execute"
+        }
+    }
+]

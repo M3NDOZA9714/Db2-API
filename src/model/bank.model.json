@@ -1,0 +1,45 @@
+[
+    {
+        "getBanco": {
+            "params": [],
+            "query": "select * from dbo.getBanco()",
+            "type": "query"
+        }
+    },
+    {
+        "insertBanco": {
+            "params": [
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "cuenta",
+                    "Type": "VarChar"
+                }
+            ],
+            "query": "dbo.insertBanco",
+            "type": "execute"
+        }
+    },
+    {
+        "updateBanco": {
+            "params": [
+                {
+                    "Param": "id",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "nombre",
+                    "Type": "VarChar"
+                },
+                {
+                    "Param": "cuenta",
+                    "Type": "VarChar"
+                }
+            ],
+            "query": "dbo.updateBanco",
+            "type": "execute"
+        }
+    }
+]
