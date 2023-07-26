@@ -24,10 +24,6 @@
                 {
                     "Param": "horas",
                     "Type": "Int"
-                },
-                {
-                    "Param": "precio",
-                    "Type": "Float"
                 }
             ],
             "query": "dbo.insertSuscripcion",
@@ -56,10 +52,6 @@
                 {
                     "Param": "horas",
                     "Type": "Int"
-                },
-                {
-                    "Param": "precio",
-                    "Type": "Float"
                 }
             ],
             "query": "dbo.updateSuscripcion",

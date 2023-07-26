@@ -12,8 +12,8 @@ const getServicio = async ({ body }: Request, res: Response) => {
 
 const insertServicio = async ({ body }: Request, res: Response) => {
     try {
-        const { nombre, descripcion } = body;
-        return res.json(await functions.insertServicio(nombre, descripcion));
+        const { nombre, descripcion, precio } = body;
+        return res.json(await functions.insertServicio(nombre, descripcion, precio));
     } catch (err) {
         handleHTTP(res, "Error Interno");
     }
@@ -21,8 +21,8 @@ const insertServicio = async ({ body }: Request, res: Response) => {
 
 const updateServicio = async ({ body }: Request, res: Response) => {
     try {
-        const { id, nombre, descripcion } = body;
-        return res.json(await functions.updateServicio(id, nombre, descripcion));
+        const { id, nombre, descripcion, precio } = body;
+        return res.json(await functions.updateServicio(id, nombre, descripcion, precio));
     } catch (err) {
         handleHTTP(res, "Error Interno");
     }

@@ -12,8 +12,8 @@ const getSuscripcion = async ({ body }: Request, res: Response) => {
 
 const insertSuscripcion = async ({ body }: Request, res: Response) => {
     try {
-        const { idPaquete, idCliente, idTecnico, horas, precio } = body;
-        return res.json(await functions.insertSuscripcion(idPaquete, idCliente, idTecnico, horas, precio));
+        const { idPaquete, idCliente, idTecnico, horas } = body;
+        return res.json(await functions.insertSuscripcion(idPaquete, idCliente, idTecnico, horas));
     } catch (err) {
         handleHTTP(res, "Error Interno");
     }
@@ -21,10 +21,9 @@ const insertSuscripcion = async ({ body }: Request, res: Response) => {
 
 const updateSuscripcion = async ({ body }: Request, res: Response) => {
     try {
-        const { id, idPaquete, idCliente, idTecnico, horas, precio } = body;
-        return res.json(await functions.updateSuscripcion(id, idPaquete, idCliente, idTecnico, horas, precio));
+        const { id, idPaquete, idCliente, idTecnico, horas } = body;
+        return res.json(await functions.updateSuscripcion(id, idPaquete, idCliente, idTecnico, horas));
     } catch (err) {
-        console.log(err)
         handleHTTP(res, "Error Interno");
     }
 }

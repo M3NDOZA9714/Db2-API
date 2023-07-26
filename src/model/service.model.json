@@ -16,6 +16,10 @@
                 {
                     "Param": "descripcion",
                     "Type": "VarChar"
+                },
+                {
+                    "Param": "precio",
+                    "Type": "Float"
                 }
             ],
             "query": "dbo.insertServicio",
@@ -36,6 +40,10 @@
                 {
                     "Param": "descripcion",
                     "Type": "VarChar"
+                },
+                {
+                    "Param": "precio",
+                    "Type": "Float"
                 }
             ],
             "query": "dbo.updateServicio",

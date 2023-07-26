@@ -7,6 +7,30 @@
         }
     },
     {
+        "getFacturaDetalle": {
+            "params": [
+                {
+                    "Param": "idFactura",
+                    "Type": "Int"
+                }
+            ],
+            "query": "select * from dbo.detalleFactura",
+            "type": "query"
+        }
+    },
+    {
+        "getServicioFactura": {
+            "params": [
+                {
+                    "Param": "idCliente",
+                    "Type": "Int"
+                }
+            ],
+            "query": "select * from dbo.getServicioFactura(@idCliente)",
+            "type": "query"
+        }
+    },
+    {
         "insertFactura": {
             "params": [
                 {
@@ -24,6 +48,18 @@
                         {
                             "Name": "Id",
                             "type": "Int"
+                        },
+                        {
+                            "Name": "IdArticulo",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "Nombre",
+                            "type": "VarChar"
+                        },
+                        {
+                            "Name": "Tipo",
+                            "type": "VarChar"
                         },
                         {
                             "Name": "Cantidad",
@@ -68,6 +104,18 @@
                             "type": "Int"
                         },
                         {
+                            "Name": "IdArticulo",
+                            "type": "Int"
+                        },
+                        {
+                            "Name": "Nombre",
+                            "type": "VarChar"
+                        },
+                        {
+                            "Name": "Tipo",
+                            "type": "VarChar"
+                        },
+                        {
                             "Name": "Cantidad",
                             "type": "Float"
                         },
@@ -83,6 +131,26 @@
                 }
             ],
             "query": "dbo.updateFactura",
+            "type": "execute"
+        }
+    },
+    {
+        "payFactura": {
+            "params": [
+                {
+                    "Param": "idBanco",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "monto",
+                    "Type": "Float"
+                },
+                {
+                    "Param": "idFactura",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.payFactura",
             "type": "execute"
         }
     }
