@@ -51,7 +51,6 @@ const payFactura = async ({ body }: Request, res: Response) => {
         const { idBanco, monto, idFactura } = body;
         return res.json(await functions.payFactura(idBanco, monto, idFactura));
     } catch (err) {
-        console.log(err)
         handleHTTP(res, "Error Interno");
     }
 }
