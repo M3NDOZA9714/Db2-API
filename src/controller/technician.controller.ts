@@ -6,7 +6,6 @@ const getTecnico = async ({ body }: Request, res: Response) => {
     try {
         return res.json(await functions.getTecnico());
     } catch (err) {
-        console.log(err)
         handleHTTP(res, "Error Interno");
     }
 }

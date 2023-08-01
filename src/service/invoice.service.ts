@@ -72,7 +72,6 @@ for (const element of json) {
             } else {
                 rs = await request.execute(query);
             }
-            console.log(rs)
             return rs.recordset;
         };
     }

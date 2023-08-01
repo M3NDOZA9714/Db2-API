@@ -6,7 +6,6 @@ const getBanco = async ({ body }: Request, res: Response) => {
     try {
         return res.json(await functions.getBanco());
     } catch (err) {
-        console.log(err)
         handleHTTP(res, "Error Interno");
     }
 }
@@ -16,7 +15,6 @@ const insertBanco = async ({ body }: Request, res: Response) => {
         const { nombre, cuenta } = body;
         return res.json(await functions.insertBanco(nombre, cuenta));
     } catch (err) {
-        console.log(err)
         handleHTTP(res, "Error Interno");
     }
 }
