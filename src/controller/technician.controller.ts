@@ -28,4 +28,13 @@ const updateTecnico = async ({ body }: Request, res: Response) => {
     }
 }
 
-export { getTecnico, insertTecnico, updateTecnico }
+const payTecnico = async ({ body }: Request, res: Response) => {
+    try {
+        const { idBando, idTecnico, monto } = body;
+        return res.json(await functions.payTecnico(idBando, idTecnico, monto));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
+export { getTecnico, insertTecnico, updateTecnico, payTecnico }

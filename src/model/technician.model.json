@@ -65,5 +65,25 @@
             "query": "dbo.updateTecnico",
             "type": "execute"
         }
+    },
+    {
+        "payTecnico": {
+            "params": [
+                {
+                    "Param": "idBanco",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "idTecnico",
+                    "Type": "Int"
+                },
+                {
+                    "Param": "monto",
+                    "Type": "Float"
+                }
+            ],
+            "query": "dbo.payTecnico",
+            "type": "execute"
+        }
     }
 ]
