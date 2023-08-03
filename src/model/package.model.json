@@ -2,7 +2,7 @@
     {
         "getPaquete": {
             "params": [],
-            "query": "select * from dbo.getPaquete()",
+            "query": "select * from dbo.vSuscripcion",
             "type": "query"
         }
     },
