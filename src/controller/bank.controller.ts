@@ -28,4 +28,13 @@ const updateBanco = async ({ body }: Request, res: Response) => {
     }
 }
 
-export { getBanco, insertBanco, updateBanco }
+const deleteBanco = async ({ body }: Request, res: Response) => {
+    try {
+        const { id } = body;
+        return res.json(await functions.deleteBanco(id));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
+export { getBanco, insertBanco, updateBanco, deleteBanco }

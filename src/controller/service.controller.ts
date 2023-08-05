@@ -28,4 +28,13 @@ const updateServicio = async ({ body }: Request, res: Response) => {
     }
 }
 
-export { getServicio, insertServicio, updateServicio }
+const deleteServicio = async ({ body }: Request, res: Response) => {
+    try {
+        const { id } = body;
+        return res.json(await functions.deleteServicio(id));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
+export { getServicio, insertServicio, updateServicio, deleteServicio }

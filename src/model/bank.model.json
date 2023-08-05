@@ -41,5 +41,17 @@
             "query": "dbo.updateBanco",
             "type": "execute"
         }
+    },
+    {
+        "deleteBanco": {
+            "params": [
+                {
+                    "Param": "idBanco",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.deleteBanco",
+            "type": "execute"
+        }
     }
 ]

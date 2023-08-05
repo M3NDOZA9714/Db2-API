@@ -28,6 +28,15 @@ const updateTecnico = async ({ body }: Request, res: Response) => {
     }
 }
 
+const deleteTecnico = async ({ body }: Request, res: Response) => {
+    try {
+        const { id } = body;
+        return res.json(await functions.deleteTecnico(id));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
 const payTecnico = async ({ body }: Request, res: Response) => {
     try {
         const { idBando, idTecnico, monto } = body;
@@ -37,4 +46,4 @@ const payTecnico = async ({ body }: Request, res: Response) => {
     }
 }
 
-export { getTecnico, insertTecnico, updateTecnico, payTecnico }
+export { getTecnico, insertTecnico, updateTecnico, deleteTecnico, payTecnico }

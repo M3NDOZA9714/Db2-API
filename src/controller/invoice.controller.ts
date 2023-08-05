@@ -46,6 +46,15 @@ const updateFactura = async ({ body }: Request, res: Response) => {
     }
 }
 
+const deleteFactura = async ({ body }: Request, res: Response) => {
+    try {
+        const { id } = body;
+        return res.json(await functions.deleteFactura(id));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
 const payFactura = async ({ body }: Request, res: Response) => {
     try {
         const { idBanco, monto, idFactura } = body;
@@ -55,4 +64,4 @@ const payFactura = async ({ body }: Request, res: Response) => {
     }
 }
 
-export { getFactura, getFacturaDetalle, insertFactura, updateFactura, getServicioFactura, payFactura }
+export { getFactura, getFacturaDetalle, insertFactura, updateFactura, getServicioFactura, payFactura, deleteFactura }

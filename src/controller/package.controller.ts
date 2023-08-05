@@ -21,8 +21,8 @@ const getServicioPaquete = async ({ query }: Request, res: Response) => {
 
 const insertPaquete = async ({ body }: Request, res: Response) => {
     try {
-        const { nombre, descripcion, servicio } = body;
-        return res.json(await functions.insertPaquete(nombre, descripcion, servicio));
+        const { nombre, descripcion, precio, servicio } = body;
+        return res.json(await functions.insertPaquete(nombre, descripcion, precio, servicio));
     } catch (err) {
         handleHTTP(res, "Error Interno");
     }
@@ -30,11 +30,20 @@ const insertPaquete = async ({ body }: Request, res: Response) => {
 
 const updatePaquete = async ({ body }: Request, res: Response) => {
     try {
-        const { id, nombre, descripcion, servicio } = body;
-        return res.json(await functions.updatePaquete(id, nombre, descripcion, servicio));
+        const { id, nombre, descripcion, precio, servicio } = body;
+        return res.json(await functions.updatePaquete(id, nombre, descripcion, precio, servicio));
     } catch (err) {
         handleHTTP(res, "Error Interno");
     }
 }
 
-export { getPaquete, getServicioPaquete, insertPaquete, updatePaquete }
+const deletePaquete = async ({ body }: Request, res: Response) => {
+    try {
+        const { id } = body;
+        return res.json(await functions.deletePaquete(id));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
+export { getPaquete, getServicioPaquete, insertPaquete, updatePaquete, deletePaquete }

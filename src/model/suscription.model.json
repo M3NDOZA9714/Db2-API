@@ -2,7 +2,7 @@
     {
         "getSuscripcion": {
             "params": [],
-            "query": "select * from dbo.getSuscripcion()",
+            "query": "select * from dbo.vSuscripcion",
             "type": "query"
         }
     },
@@ -55,6 +55,18 @@
                 }
             ],
             "query": "dbo.updateSuscripcion",
+            "type": "execute"
+        }
+    },
+    {
+        "deleteSuscripcion": {
+            "params": [
+                {
+                    "Param": "idSuscripcion",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.deleteSuscripcion",
             "type": "execute"
         }
     }

@@ -2,7 +2,7 @@
     {
         "getPaquete": {
             "params": [],
-            "query": "select * from dbo.vSuscripcion",
+            "query": "select * from dbo.getPaquete()",
             "type": "query"
         }
     },
@@ -28,6 +28,10 @@
                 {
                     "Param": "descripcion",
                     "Type": "VarChar"
+                },
+                {
+                    "Param": "precio",
+                    "Type": "Float"
                 },
                 {
                     "Param": "servicio",
@@ -80,6 +84,10 @@
                     "Type": "VarChar"
                 },
                 {
+                    "Param": "precio",
+                    "Type": "Float"
+                },
+                {
                     "Param": "servicio",
                     "Type": "Table",
                     "Cols": [
@@ -111,6 +119,18 @@
                 }
             ],
             "query": "dbo.updatePaquete",
+            "type": "execute"
+        }
+    },
+    {
+        "deletePaquete": {
+            "params": [
+                {
+                    "Param": "idPaquete",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.deletePaquete",
             "type": "execute"
         }
     }

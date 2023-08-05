@@ -28,4 +28,13 @@ const updateCliente = async ({ body }: Request, res: Response) => {
     }
 }
 
-export { getCliente, insertCliente, updateCliente }
+const deleteCliente = async ({ body }: Request, res: Response) => {
+    try {
+        const { id } = body;
+        return res.json(await functions.deleteCliente(id));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
+export { getCliente, insertCliente, updateCliente, deleteCliente }

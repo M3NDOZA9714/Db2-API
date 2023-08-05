@@ -85,5 +85,17 @@
             "query": "dbo.payTecnico",
             "type": "execute"
         }
+    },
+    {
+        "deleteTecnico": {
+            "params": [
+                {
+                    "Param": "idTecnico",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.deleteTecnico",
+            "type": "execute"
+        }
     }
 ]

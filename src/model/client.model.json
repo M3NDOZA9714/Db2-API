@@ -57,5 +57,17 @@
             "query": "dbo.updateCliente",
             "type": "execute"
         }
+    },
+    {
+        "deleteCliente": {
+            "params": [
+                {
+                    "Param": "idCliente",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.deleteCliente",
+            "type": "execute"
+        }
     }
 ]

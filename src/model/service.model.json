@@ -49,5 +49,17 @@
             "query": "dbo.updateServicio",
             "type": "execute"
         }
+    },
+    {
+        "deleteServicio": {
+            "params": [
+                {
+                    "Param": "idServicio",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.deleteServicio",
+            "type": "execute"
+        }
     }
 ]

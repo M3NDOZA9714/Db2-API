@@ -135,6 +135,18 @@
         }
     },
     {
+        "deleteFactura": {
+            "params": [
+                {
+                    "Param": "idFactura",
+                    "Type": "Int"
+                }
+            ],
+            "query": "dbo.deleteFactura",
+            "type": "execute"
+        }
+    },
+    {
         "payFactura": {
             "params": [
                 {

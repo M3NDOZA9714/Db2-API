@@ -28,4 +28,14 @@ const updateSuscripcion = async ({ body }: Request, res: Response) => {
     }
 }
 
-export { getSuscripcion, insertSuscripcion, updateSuscripcion }
+const deleteSuscripcion = async ({ body }: Request, res: Response) => {
+    try {
+        const { id } = body;
+        console.log(id)
+        return res.json(await functions.deleteSuscripcion(id));
+    } catch (err) {
+        handleHTTP(res, "Error Interno");
+    }
+}
+
+export { getSuscripcion, insertSuscripcion, updateSuscripcion, deleteSuscripcion }
