@@ -1,0 +1,9 @@
+[
+    {
+        "getPago": {
+            "params": [],
+            "query": "select * from dbo.getPago",
+            "type": "query"
+        }
+    }
+]
